@@ -1,4 +1,4 @@
-package controller;
+package Reservation;
 
 import Room.Room;
 import org.example.Hotel;

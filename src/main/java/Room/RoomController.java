@@ -1,4 +1,4 @@
-package controller;
+package Room;
 
 import Room.Room;
 import Room.RoomService;

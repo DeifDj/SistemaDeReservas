@@ -1,4 +1,4 @@
-package controller;
+package Swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
