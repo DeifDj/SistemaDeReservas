@@ -1,6 +1,6 @@
 package controller;
 
-import org.example.Habitacion;
+import Room.Room;
 import org.example.Hotel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,14 +21,14 @@ public class ReservaController {
     }
 
     @GetMapping("/habitaciones-disponibles")
-    public List<Habitacion> mostrarHabitacionesDisponibles() {
+    public List<Room> mostrarHabitacionesDisponibles() {
         return hotel.mostrarHabitacionesDisponibles();
     }
 
     @PostMapping("/reservar/{numero}")
     public ResponseEntity<String> reservarHabitacion(@PathVariable int numero) {
-        Habitacion habitacionReservada = hotel.reservarHabitacion(numero);
-        if (habitacionReservada != null) {
+        Room roomReservada = hotel.reservarHabitacion(numero);
+        if (roomReservada != null) {
             return ResponseEntity.ok("Habitación " + numero + " reservada con éxito.");
         } else {
             return ResponseEntity.badRequest().body("Lo siento, la habitación no está disponible o no existe.");

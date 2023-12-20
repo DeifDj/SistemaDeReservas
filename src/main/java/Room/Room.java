@@ -1,18 +1,18 @@
-package org.example;
+package Room;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "habitaciones")
-    public class Habitacion {
+    public class Room {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
         private int numero;
         private boolean disponible;
 
-        public Habitacion(int numero) {
+        public Room(int numero) {
             this.numero = numero;
             this.disponible = true;
         }

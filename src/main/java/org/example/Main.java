@@ -1,5 +1,6 @@
 package org.example;
 
+import Room.Room;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -30,8 +31,8 @@ class SistemaReservaHotel {
                 case 2:
                     System.out.print("Ingrese el número de habitación que desea reservar: ");
                     int numReserva = scanner.nextInt();
-                    Habitacion habitacionReservada = hotel.reservarHabitacion(numReserva);
-                    if (habitacionReservada != null) {
+                    Room roomReservada = hotel.reservarHabitacion(numReserva);
+                    if (roomReservada != null) {
                         System.out.println("¡Habitación " + numReserva + " reservada con éxito!");
                     } else {
                         System.out.println("Lo siento, la habitación no está disponible o no existe.");
