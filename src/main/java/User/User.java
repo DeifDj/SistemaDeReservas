@@ -2,7 +2,9 @@ package User;
 
 import jakarta.persistence.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.stereotype.Service;
 
+@Service
 @Document(collection = "users")
 public class User {
     @Id
