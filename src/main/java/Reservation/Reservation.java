@@ -11,7 +11,7 @@ public class Reservation {
     private String guestName;
     private String roomNumber;
 
-    public Reservation(String id, String guestName, String roomNumber) {
+    public Reservation(String id, String guestName, String number) {
         this.id = id;
         this.guestName = guestName;
         this.roomNumber = roomNumber;
