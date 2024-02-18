@@ -24,6 +24,10 @@ public class Booking {
         this.bookingDate = bookingDate;
     }
 
+    public Booking(String number, String johnDoe) {
+    }
+
+
     public String getId() {
         return id;
     }
@@ -64,5 +68,9 @@ public class Booking {
                 ", details='" + details + '\'' +
                 ", bookingDate=" + bookingDate +
                 '}';
+    }
+
+    public String getGuestName() {
+        return null;
     }
 }

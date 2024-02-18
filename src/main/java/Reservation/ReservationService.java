@@ -1,30 +1,28 @@
 package Reservation;
 
-
-//import com.tu.paquete.model.Reservation;
-//import com.tu.paquete.repository.ReservationRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 
-@Service
 public class ReservationService {
+    private ReservationRepository reservaRepository;
 
-    private final ReservationRepository reservationRepository;
+    public ReservationService(ReservationRepository reservaRepository) {
+        this.reservaRepository = reservaRepository;
+    }
 
-    @Autowired
-    public ReservationService(ReservationRepository reservationRepository) {
-        this.reservationRepository = reservationRepository;
+    public boolean realizarReserva(String habitacionId, String cliente) {
+        // Lógica para realizar la reserva
+        // ...
+
+        // Guardar la reserva en el repositorio
+        Reservation reserva = new Reservation(habitacionId, cliente, "101");
+        return reservaRepository.guardarReserva(reserva);
     }
 
     public List<Reservation> findByGuestName(String guestName) {
-        return reservationRepository.findByGuestName(guestName);
+        return null;
     }
 
     public Reservation saveReservation(Reservation reservation) {
-        return reservationRepository.save(reservation);
+        return null;
     }
-
-
 }
